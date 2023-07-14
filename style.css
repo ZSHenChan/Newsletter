@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
     padding:0;
     margin:0;
-    font-size: 16px;;
+    font-size: 1rem;
 }
 
 .container{
@@ -17,8 +17,8 @@
 }
 
 .content{
-    height:80%;
-    width: 70%;
+    min-height:80%;
+    max-width: 70%;
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -29,11 +29,11 @@
     flex-direction: column;
     align-self: center;
     justify-self: center;
-    width: 60%;
-    padding: 40px;
+    max-width: 60%;
+    padding: 20px;
 }
 .content .left h1{
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -44,6 +44,8 @@
 .content .left li{
     list-style: none;
     margin-bottom: 10px;
+    background: url(/assets/images/icon-list.svg) no-repeat left top;
+    padding: 0 0 3px 30px;
 }
 .content .left svg{
     margin-right: 10px;
@@ -52,7 +54,7 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 10px;
-    width:100%;
+    min-width:100%;
     justify-content: space-between;
 }
 .content .left input{
@@ -61,7 +63,7 @@
     border-width: 1px;
     border-color: hsl(231, 7%, 60%);
     margin-bottom: 20px;
-    width: 90%;
+    min-width: 90%;
     text-indent: 20px;
 }
 .content .left button{
@@ -70,7 +72,7 @@
     color: white;
     background-color: hsl(234, 29%, 20%);
     border: none;
-    width: 90%;
+    min-width: 100%;
     cursor: pointer;
 }
 .content .left .invalid-msg{
@@ -93,12 +95,12 @@
 
 .content .right{
     display: flex;
-    width: 40%;
-    margin-left: 0;
-    box-sizing: border-box;
+    padding: 10px;
+    max-width: 100%;
 }
 .content .right svg{
-    height: 100%;
+    display: flex;
+    max-width: 100%;
 }
 #img1{
     display: flex;
@@ -111,15 +113,14 @@
     .content{
         padding: 0;
         flex-direction: column-reverse;
-        width: 100%;
+        min-width: 100%;
+        min-height: 1vh;
     }
     .content .right{
-        width: 100%;
-        padding: 0;
-        margin: 0;
+        object-fit: cover;
     }
     .content .right svg{
-        object-fit: cover;
+        object-fit:cover;
         object-position: center;
     }
     #img1{
@@ -128,18 +129,18 @@
     #img2{
         display: block;
         object-fit: contain;
-        height: 200px;
+        height: 100%;
     }
     *{
-        font-size: 12px;
+        font-size: 1rem;
     }
     .content .left{
         width:90%;
     }
     .content .left h1{
-        font-size: 30px;
+        font-size: 2rem;
     }
     .content .left button,.content .left input{
-        width: 100%;
+        max-width: 100%;
     }
 }
