@@ -29,7 +29,7 @@
     flex-direction: column;
     align-self: center;
     justify-self: center;
-    max-width: 60%;
+    min-width: 50%;
     padding: 20px;
 }
 .content .left h1{
@@ -75,8 +75,12 @@
     min-width: 100%;
     cursor: pointer;
 }
+.content .left .email span{
+    font-size: 0.75rem;
+}
 .content .left #invalid-msg{
     color: tomato;
+    font-size: 0.75rem;
     display: flex;
 }
 .content .left input:invalid{
@@ -101,12 +105,16 @@
 }
 #img1{
     display: flex;
+    justify-self: flex-end;
+    max-width: 100%;
 }
 #img2{
     display: none;
+    box-sizing: border-box;
+    min-width: 100%;
 }
 
-@media(max-width:700px){
+@media(max-width:600px){
     .content{
         padding: 0;
         flex-direction: column-reverse;
@@ -115,6 +123,8 @@
     }
     .content .right{
         object-fit: cover;
+        padding: 0;
+        margin-bottom: 20px;
     }
     .content .right svg{
         object-fit:cover;
@@ -124,9 +134,10 @@
         display: none;
     }
     #img2{
-        display: block;
-        object-fit: contain;
-        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 80%;
     }
     *{
         font-size: 1rem;
@@ -134,8 +145,11 @@
     .content .left{
         width:90%;
     }
+    .content .left li{
+        margin-bottom: 15px;
+    }
     .content .left h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .content .left button,.content .left input{
         max-width: 100%;
