@@ -63,7 +63,7 @@
     border-width: 1px;
     border-color: hsl(231, 7%, 60%);
     margin-bottom: 20px;
-    min-width: 90%;
+    min-width: 100%;
     text-indent: 20px;
 }
 .content .left button{
@@ -75,14 +75,11 @@
     min-width: 100%;
     cursor: pointer;
 }
-.content .left .invalid-msg{
+.content .left #invalid-msg{
     color: tomato;
-    display: none;
+    display: flex;
 }
 .content .left input:invalid{
-    .invalid-msg{
-        display: flex;
-    }
     background-color: rgb(254, 229, 224);
     border-color: tomato;
     border-width: 2px;

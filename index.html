@@ -26,11 +26,11 @@
           <li>And much more!</li>
         </ul>
         <div class="email">
-        <span>Email Address</span>
-        <span class="invalid-msg">Valid email required</>
+          <span>Email Address</span>
+          <span id="invalid-msg">Valid email required</span>
         </div>
         <form id="form">
-          <input id="user-email", type="email", placeholder="email@company.com" required>
+          <input id="user-email", type="email", placeholder="email@company.com" onkeyup="validateEmail()" required>
           <button type="submit" id="getEmail">Subscribe to monthly newsletter</button>
         </form>
       </div>
